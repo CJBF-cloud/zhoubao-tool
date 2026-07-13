@@ -15,7 +15,7 @@ jobs:
         python-version: '3.9'
     - run: pip install pandas numpy PyQt5 pyinstaller openpyxl
     - run: pyinstaller --onefile --windowed --name "周报对比工具" --exclude-module scipy --exclude-module matplotlib --exclude-module IPython --exclude-module jupyter --hidden-import pandas --hidden-import numpy --hidden-import PyQt5 --hidden-import openpyxl --clean --noconfirm 周报对比工具.py
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: 周报对比工具-Windows
         path: dist/周报对比工具.exe
